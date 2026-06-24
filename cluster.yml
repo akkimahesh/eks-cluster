@@ -1,0 +1,13 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+ name: my-eks-cluster
+ region: us-east-1
+nodeGroups:
+ - name: nodegroup-name
+   instanceType: ["m5.large", "m5.xlarge", "m5.2xlarge"]
+   desiredCapacity: 2
+   volumeSize: 20
+   spot: true
+   ssh:
+     allow: true # Enables SSH access using default key (~/.ssh/id_rsa.pub)
