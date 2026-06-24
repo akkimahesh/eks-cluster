@@ -9,5 +9,6 @@ managedNodeGroups:
    desiredCapacity: 2
    volumeSize: 20
    spot: true
-   ssh:
-     allow: true # Enables SSH access using default key (~/.ssh/id_rsa.pub)
+  #  ssh:
+  #    allow: true # Enables SSH access using default key (~/.ssh/id_rsa.pub)
+  # generate ssh keypairs on server or local where eksctl is running and add the public key to the nodegroup
